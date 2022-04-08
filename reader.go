@@ -179,6 +179,8 @@ OUT:
 			switch value {
 			case nil:
 				return nil, y.Error("Unexpect", nil)
+			case "\"\"":
+				continue OUT
 			case MAP_KEY_ONLY:
 				//log.Println("KeyOnly, read inner Map", key)
 
